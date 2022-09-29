@@ -5,8 +5,9 @@ internal class RoverTest {
 
     @Test
     fun `should start with default position` () {
-        val rover = Rover();
+        val rover = Rover()
 
-        Assertions
+        Assertions.assertThat(rover.x).isEqualTo(0)
+        Assertions.assertThat(rover.y).isEqualTo(0)
     }
 }

@@ -1,3 +1,3 @@
-class Rover (val x : Int, val y : Int) {
+class Rover (val x : Int = 0, val y : Int = 0) {
 
 }
