@@ -1,4 +1,5 @@
 import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class RoverTest {
@@ -7,7 +8,6 @@ internal class RoverTest {
     fun `should start with default position` () {
         val rover = Rover()
 
-        Assertions.assertThat(rover.x).isEqualTo(0)
-        Assertions.assertThat(rover.y).isEqualTo(0)
+        assertThat(rover.coordinate).isEqualTo(Coordinate(0,0))
     }
 }

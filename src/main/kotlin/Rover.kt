@@ -1,3 +1,5 @@
-class Rover (val x : Int = 0, val y : Int = 0) {
+class Rover (val coordinate : Coordinate = Coordinate(0,0)) {
+
+
 
 }
