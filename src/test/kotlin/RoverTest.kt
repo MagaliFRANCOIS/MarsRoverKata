@@ -1,3 +1,4 @@
+import Direction.NORTH
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
@@ -8,15 +9,15 @@ internal class RoverTest {
         val rover = Rover()
 
         assertThat(rover.point).isEqualTo(Point(0,0))
-        assertThat(rover.direction).isEqualTo(Direction.NORTH)
+        assertThat(rover.direction).isEqualTo(NORTH)
     }
 
     @Test
     fun `should go forward to north` () {
         val rover = Rover()
         
-        val roverCompare = Rover()
+        rover.receive("F")
 
-
+        assertThat(rover).isEqualTo(Rover(Point(0, 1), NORTH))
     }
 }
