@@ -2,7 +2,7 @@ import Direction.*
 
 class Rover (var point : Point = Point(0,0), val direction : Direction = NORTH) {
 
-    fun execute(command: String) {
+    fun execute(command: List<Command>) {
         if (direction == EAST)
             this.point = Point(1, 0)
         else if (direction == SOUTH)
