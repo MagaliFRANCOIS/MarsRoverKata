@@ -3,12 +3,12 @@ import Direction.*
 class Rover (var point : Point = Point(0,0), val direction : Direction = NORTH) {
 
     fun execute(command: List<Command>) {
-        if (direction == EAST)
-            this.point = Point(1, 0)
-        else if (direction == SOUTH)
-            this.point = Point(0, -1)
-        else
-            this.point = Point(0, 1)
+        when (direction) {
+            EAST -> this.point = Point(1, 0)
+            SOUTH -> this.point = Point(0, -1)
+            WEST -> this.point = Point(-1, 0)
+            else -> this.point = Point(0, 1)
+        }
     }
 
     override fun equals(other: Any?): Boolean {
