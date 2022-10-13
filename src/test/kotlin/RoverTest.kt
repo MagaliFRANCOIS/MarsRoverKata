@@ -10,4 +10,13 @@ internal class RoverTest {
         assertThat(rover.point).isEqualTo(Point(0,0))
         assertThat(rover.direction).isEqualTo(Direction.NORTH)
     }
+
+    @Test
+    fun `should go forward to north` () {
+        val rover = Rover()
+        
+        val roverCompare = Rover()
+
+
+    }
 }
