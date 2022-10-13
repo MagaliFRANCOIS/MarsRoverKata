@@ -1,9 +1,7 @@
+import Direction.EAST
 import Direction.NORTH
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.CsvSource
-import org.junit.jupiter.params.provider.ValueSource
 
 internal class RoverTest {
 
@@ -20,8 +18,17 @@ internal class RoverTest {
     fun `should go forward to north`() {
         val rover = Rover()
         
-        rover.receive("F")
+        rover.execute("F")
 
         assertThat(rover).isEqualTo(Rover(Point(0, 1), NORTH))
+    }
+
+    @Test
+    fun `should go forward to east`() {
+        val rover = Rover(direction = EAST)
+
+        rover.execute("F")
+
+        assertThat(rover).isEqualTo(Rover(Point(1, 0), EAST))
     }
 }

@@ -1,9 +1,13 @@
+import Direction.EAST
 import Direction.NORTH
 
 class Rover (var point : Point = Point(0,0), val direction : Direction = NORTH) {
 
-    fun receive(command: String) {
-        this.point = Point(0, 1)
+    fun execute(command: String) {
+        if (direction == EAST)
+            this.point = Point(1, 0)
+        else
+            this.point = Point(0, 1)
     }
 
     override fun equals(other: Any?): Boolean {
