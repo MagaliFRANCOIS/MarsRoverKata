@@ -1,11 +1,12 @@
-import Direction.EAST
-import Direction.NORTH
+import Direction.*
 
 class Rover (var point : Point = Point(0,0), val direction : Direction = NORTH) {
 
     fun execute(command: String) {
         if (direction == EAST)
             this.point = Point(1, 0)
+        else if (direction == SOUTH)
+            this.point = Point(0, -1)
         else
             this.point = Point(0, 1)
     }
@@ -27,4 +28,10 @@ class Rover (var point : Point = Point(0,0), val direction : Direction = NORTH) 
         result = 31 * result + direction.hashCode()
         return result
     }
+
+    override fun toString(): String {
+        return "Rover(point=$point, direction=$direction)"
+    }
+
+
 }
