@@ -16,15 +16,12 @@ internal class RoverTest {
     }
 
 
-    @ParameterizedTest
-    @CsvSource(value = [
-        "F,0,1,NORTH"
-    ])
-    fun `should go forward`(command: String, xPosition: Int, yPosition: Int, direction: Direction) {
+    @Test
+    fun `should go forward to north`() {
         val rover = Rover()
         
-        rover.receive(command)
+        rover.receive("F")
 
-        assertThat(rover).isEqualTo(Rover(Point(xPosition, yPosition), direction))
+        assertThat(rover).isEqualTo(Rover(Point(0, 1), NORTH))
     }
 }
