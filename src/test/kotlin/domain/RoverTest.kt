@@ -1,5 +1,7 @@
-import Command.FORWARD
-import Direction.*
+package domain
+
+import domain.Command.FORWARD
+import domain.Direction.*
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 

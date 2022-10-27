@@ -1,4 +1,6 @@
-import Direction.*
+package domain
+
+import domain.Direction.*
 
 data class Rover (var point : Point = Point(0,0), val direction : Direction = NORTH) {
 
