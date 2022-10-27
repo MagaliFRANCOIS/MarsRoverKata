@@ -13,7 +13,6 @@ internal class RoverTest {
         assertThat(rover.direction).isEqualTo(NORTH)
     }
 
-
     @Test
     fun `should go forward to north`() {
         val rover = Rover()
