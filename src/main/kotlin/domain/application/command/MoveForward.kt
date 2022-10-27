@@ -10,6 +10,6 @@ class MoveForward(private val roverRepository: RoverRepository) {
     fun execute(idRover: Identifier, commands: List<Command>): Rover {
         val rover = roverRepository.findById(idRover)
         rover.execute(commands)
-        return rover
+        return roverRepository.save(rover)
     }
 }
