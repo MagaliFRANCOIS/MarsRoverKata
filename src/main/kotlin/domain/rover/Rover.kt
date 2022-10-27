@@ -1,8 +1,8 @@
-package domain
+package domain.rover
 
-import domain.Direction.*
+import domain.rover.Direction.*
 
-data class Rover (var point : Point = Point(0,0), val direction : Direction = NORTH) {
+data class Rover(var point : Point = Point(0,0), val direction : Direction = NORTH) {
 
     fun execute(command: List<Command>) {
         when (direction) {

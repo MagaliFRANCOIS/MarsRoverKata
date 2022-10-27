@@ -1,7 +1,9 @@
 package domain
 
-import domain.Command.FORWARD
-import domain.Direction.*
+import domain.rover.Command.FORWARD
+import domain.rover.Direction.*
+import domain.rover.Point
+import domain.rover.Rover
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 

@@ -1,4 +1,4 @@
-package domain
+package domain.rover
 
 enum class Direction {
     NORTH,
